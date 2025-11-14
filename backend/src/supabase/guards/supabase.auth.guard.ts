@@ -12,7 +12,6 @@ export class SupabaseAuthGuard implements CanActivate {
 
     if (token) {
       request.supabase = this.supabase.getClientForToken(token);
-      request.accessToken = token;
       return true
     }
 

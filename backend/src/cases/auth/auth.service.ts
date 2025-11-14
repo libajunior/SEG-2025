@@ -1,8 +1,13 @@
-import { Inject, Injectable, InternalServerErrorException, NotFoundException, UnauthorizedException } from "@nestjs/common"
-import { SupabaseService } from "src/supabase/supabase.service"
-import { AuthDTO } from "./dtos/auth.dto"
-import { UserService } from "../users/user.service";
-import { SupabaseClient } from "@supabase/supabase-js";
+import {
+  Inject,
+  Injectable,
+  InternalServerErrorException,
+  NotFoundException,
+  UnauthorizedException,
+} from '@nestjs/common'
+import { AuthDTO } from './dtos/auth.dto'
+import { UserService } from '../users/user.service'
+import type { SupabaseClient } from '@supabase/supabase-js'
 
 @Injectable()
 export class AuthService {
